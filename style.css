@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+  background-color: antiquewhite;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: gray;
+  background-size: contain;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 65px;
+  background-color: black;
+  color: white;
+}
+
+
+.about {
+  flex: 1; /* Distribute available space evenly among all list items */
+  padding: 0 80px;
+  justify-content: flex-end; /* Align items to the right within the available space */
+}
+ .brand{
+    flex: 1;
+    padding: 0 12px;
+    justify-content: flex-start;
+ }
+
+
+.brand img {
+  width: 44px;
+  padding: 0 8px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.container {
+  /* min-height: 63vh; */
+  height: 60vh;
+
+
+
+  background-color: black;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+
+  margin-top: 23px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border-radius: 12px;
+  padding: 34px;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bottom {
+  position: sticky;
+  bottom: 0;
+  height: 80px;
+
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* #autoplayToggle {
+  margin-left: 800px;} /* Push the button to the right */
+
+*/ .icons {
+  margin-top: 14px;
+}
+
+.icons i {
+  cursor: pointer;
+  margin: 0 5x;
+}
+
+#myProgressBar {
+  margin-top: 10px;
+  width: 80vw;
+  cursor: pointer;
+}
+
+.songItemContainer {
+  margin-top: 60px;
+  width: 55%;
+
+}
+
+.songItem {
+  height: 45px;
+  display: flex;
+  background-color: white;
+
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.songItem img {
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+
+.timestamp {
+  margin: 0 23px;
+}
+
+.timestamp i {
+  cursor: pointer;
+}
+
+.songInfo {
+  position: absolute;
+  left: 10vw;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+    background-color: red;
+  }
+}
+
+.songList {
+
+
+  height: 50%;
+  width: 100%;
+
+}
+
+.songList h1 {
+  position: relative;
+}
+
+.songItemContainer {
+  overflow: auto;
+  width: 60%;
+  height: 293px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(27, 24, 24);
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.songlistplay {
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 3px;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.songInfo {
+  margin-top: 20px;
+
+}
+
+.songName {
+  white-space: nowrap;
+  width: 11rem;
+
+  /* animation: moveRight 5s linear infinite; */
+
+}
+
+/* .songName{
+    animation: scrollText 5s linear infinite;
+}
+@keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } */
+
+.abc {
+  width: 200px;
+  overflow: hidden;
+  /* border: 1px solid #000000; */
+  white-space: nowrap;
+}
+
+.songName1 {
+  animation: scrollText 5s linear infinite;
+  transition: 5s;
+}
+
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animation1 {
+  animation-play-state: paused;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Style the thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Color of the thumb */
+  border-radius: 6px;
+  /* Rounded corners */
+}
+
+/* Style the track (the non-draggable part) */
+::-webkit-scrollbar-track {
+  background-color: #19222c;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  /* Color of the track */
+}
+
+/* Style the buttons (arrows) at the top and bottom of the scrollbar */
+::-webkit-scrollbar-button {
+  display: none;
+  /* Hide the buttons */
+}
+
+.autoplay {
+  position: absolute;
+  right: 30vw;
+  margin-top: 27px;
+
+  font-family: 'Varela Round', sans-serif;
+}
+
